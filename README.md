@@ -115,14 +115,14 @@ ORDER BY
 This Power BI dashboard uses bookmarks to allow users to switch between different demographic analyses (Age, Gender, Blood Type). Instead of having multiple separate dashboards, users can navigate seamlessly through a single interactive report.
 
 ### Key Views:
-- **Cost by Age Group**  
+- **Age Demographics**  
   [Age Dashboard](https://github.com/aurimasplaga/Healthcare_demographic_analysis/blob/main/Dashboards/Age%20Dashboard.png)
 
-- **Cost by Gender**  
-  [Gender Dashboard](https://github.com/aurimasplaga/Healthcare_demographic_analysis/blob/main/Dashboards/Gender%20Dashboard.png)
-
-- **Cost by Blood Type**  
+- **Blood Type Demographics**  
   [Blood Type Dashboard](https://github.com/aurimasplaga/Healthcare_demographic_analysis/blob/main/Dashboards/Blood%20Type%20Dashboard.png) 
+
+- **Gender Demographics**  
+  [Gender Dashboard](https://github.com/aurimasplaga/Healthcare_demographic_analysis/blob/main/Dashboards/Gender%20Dashboard.png)
 
 **Visual Elements:**  
 - Develop charts, graphs, and tables to display key insights like cost distribution by demographics and insurance trends.
@@ -147,7 +147,6 @@ This Power BI dashboard uses bookmarks to allow users to switch between differen
 ## 4. Insights & Findings
 
 ### Main Insights
-
 
 - **Demographics & Costs:**
   - Older patients (60+) and males drive higher healthcare costs due to severe conditions, longer hospital stays, and higher billing amounts.
