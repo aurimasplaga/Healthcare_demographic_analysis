@@ -40,13 +40,13 @@ The project is divided into several key phases:
 
 ---
 
-## 2. Exploratory Data Analysis (EDA) Using SQL
+## 2. Exploratory Data Analysis (EDA) Using SQL  
 
-### Initial Analysis
-- **Descriptive Statistics:** Run SQL queries to calculate averages, medians, and distributions (e.g., patient age, billing amounts).
-- **Data Aggregation:** Group data by demographics (age, gender, blood type) to understand cost patterns and severity levels.
+### 🔍 Initial Analysis  
+- **Descriptive Statistics:** SQL queries were used to compute averages, medians, and distributions for key metrics such as patient age, billing amounts, and length of stay.  
+- **Data Aggregation:** Grouped data by demographics (age, gender, blood type) to identify cost patterns and severity trends.  
 
-### Sample SQL Query
+### 📌 Sample SQL Query  
 ```sql
 -- Blood demographic average stay duration and average billing amount based on medical condition:
 
@@ -108,6 +108,8 @@ ORDER BY
 | A+         | Gallstones             | 14.17   | 6471.25   |
 | A+         | Obesity                | 18.29   | 6265.05   |
 
+[All SQL queries used for aggregating data can be found here.](https://github.com/aurimasplaga/Healthcare_demographic_analysis/tree/main/SQL%20Queries)
+
 ## 3. Visualization with Power BI
 
 ### Dynamic Dashboard with Bookmarks
@@ -115,21 +117,30 @@ ORDER BY
 This Power BI dashboard uses bookmarks to allow users to switch between different demographic analyses (Age, Gender, Blood Type). Instead of having multiple separate dashboards, users can navigate seamlessly through a single interactive report.
 
 ### Key Views:
-- **Age Demographics**  
-  [Age Dashboard](https://github.com/aurimasplaga/Healthcare_demographic_analysis/blob/main/Dashboards/Age%20Dashboard.png)
+Each demographic-specific dashboard provides insights into healthcare billing patterns, helping identify trends across different groups.
 
-- **Blood Type Demographics**  
-  [Blood Type Dashboard](https://github.com/aurimasplaga/Healthcare_demographic_analysis/blob/main/Dashboards/Blood%20Type%20Dashboard.png) 
+- **[Age Demographics](https://github.com/aurimasplaga/Healthcare_demographic_analysis/blob/main/Dashboards/Age%20Dashboard.png)**  
+  *Breakdown of total medical costs and insurance coverage by age group.*
 
-- **Gender Demographics**  
-  [Gender Dashboard](https://github.com/aurimasplaga/Healthcare_demographic_analysis/blob/main/Dashboards/Gender%20Dashboard.png)
+- **[Blood Type Demographics](https://github.com/aurimasplaga/Healthcare_demographic_analysis/blob/main/Dashboards/Blood%20Type%20Dashboard.png)**  
+  *Analysis of billing trends based on blood type.*
 
-**Visual Elements:**  
-- Develop charts, graphs, and tables to display key insights like cost distribution by demographics and insurance trends.
+- **[Gender Demographics](https://github.com/aurimasplaga/Healthcare_demographic_analysis/blob/main/Dashboards/Gender%20Dashboard.png)**  
+  *Comparison of healthcare costs and insurance claims by gender.*
 
-> **Placeholder:**  
-> ![Power BI Dashboard Screenshot](https://github.com/aurimasplaga/Healthcare_demographic_analysis/blob/main/Dashboards/Billing%20Dashboard.png)  
-> *Include a sample screenshot of your Power BI dashboard here.*
+---
+
+### **Insurance Provider Billings & Hospital Costs**
+This Power BI dashboard provides an interactive view of **healthcare billing data**, focusing on **insurance provider distribution and top billing hospitals/clinics**.  
+
+The visuals include:  
+✅ **Card KPIs** summarizing total costs  
+📊 **Bar and column charts** for provider billing analysis  
+📈 **Histogram and scatter point charts** to highlight spending patterns  
+
+> ![Power BI Dashboard Screenshot](https://github.com/aurimasplaga/Healthcare_demographic_analysis/blob/main/Dashboards/Billing%20Dashboard.png)
+
+
 
 ### Key Visuals in the Dashboard
 
@@ -142,24 +153,30 @@ This Power BI dashboard uses bookmarks to allow users to switch between differen
 - **Facility Utilization:**  
   Charts comparing hospital and clinic billing for severe versus routine cases.
 
----
+[Interactive Dashboard template can be downloaded here](https://github.com/aurimasplaga/Healthcare_demographic_analysis/tree/main/Dashboards/Template)
 
+---
 ## 4. Insights & Findings
 
 ### Main Insights
 
-- **Demographics & Costs:**
-  - Older patients (60+) and males drive higher healthcare costs due to severe conditions, longer hospital stays, and higher billing amounts.
-- **Chronic vs. Acute Conditions:**
-  - Chronic diseases (arthritis, obesity) are more common in females and younger adults, while acute conditions (sepsis, TBI, cancer) dominate males and older patients.
-- **Blood Type & Resource Utilization:**
-  - O+ and A+ patients consume the most resources due to their prevalence, while rare blood types (AB+, B-) incur the highest costs per patient.
-- **Severity & Billing Impact:**
-  - Severe conditions consistently lead to higher costs, especially for elderly patients, males, and rare blood types (B-, AB-).
-- **Insurance & High-Cost Claims:**
-  - UnitedHealthcare & Medicare cover nearly 50% of all claims, while only 4% exceed $50K, yet these account for a major share of total billing.
-- **Billing Trends:**
-  7.5% of claims exceed $100K, mostly linked to elderly patients and severe conditions, while 63% of claims remain under $10K, reflecting lower-cost treatments.
+- **Demographics & Costs:**  
+  - Older adults (60+) and males drive **higher healthcare costs** due to severe conditions, longer hospital stays, and higher billing amounts.  
+
+- **Chronic vs. Acute Conditions:**  
+  - Chronic diseases (arthritis, obesity) are more prevalent in **females and younger adults**, while acute conditions (sepsis, TBI, cancer) dominate **males and older patients**.  
+
+- **Blood Type & Resource Utilization:**  
+  - O+ and A+ patients consume the most resources due to their **higher prevalence**, while rare blood types (AB+, B-) incur **the highest costs per patient**.  
+
+- **Severity & Billing Impact:**  
+  - Severe conditions consistently lead to **higher costs**, especially for **elderly patients, males, and rare blood types (B-, AB-)**.  
+
+- **Insurance & High-Cost Claims:**  
+  - **UnitedHealthcare & Medicare** cover nearly **50% of all claims**, while only **4% of claims exceed $50K**, yet they account for a **major share of total billing**.  
+
+- **Billing Trends:**  
+  - **7.5% of claims exceed $100K**, primarily linked to **elderly patients and severe conditions**, while **63% of claims are under $10K**, reflecting lower-cost treatments.  
 
 ---
 
@@ -167,31 +184,48 @@ This Power BI dashboard uses bookmarks to allow users to switch between differen
 
 ### Strategic Recommendations
 
-- **Preventive Care & High-Cost Group Focus:**
-  - Implement injury prevention for young adults, chronic disease screenings for older adults, and targeted programs for high-cost groups (elderly, males, rare blood types).
-- **Resource Allocation by Blood Type & Severity:**
-  - Prioritize O+ and A+ patients, develop specialized care units for severe conditions, and allocate preventive care for lower-cost cases.
-- **Cost Management & Facility Optimization:**
-  - Collaborate with high-cost insurers to reduce claims, expand hospital resources for severe cases, and strengthen clinic support for chronic care.
-- **Strategic Facility Utilization:**
-  - Shift routine cases to clinics, increase hospital capacity for emergencies, and launch community outreach programs to optimize healthcare access.
+- **Preventive Care & High-Cost Group Focus:**  
+  - Implement **injury prevention** programs for young adults.  
+  - Expand **chronic disease screenings** for older adults.  
+  - Develop **targeted programs** for high-cost groups (elderly, males, rare blood types).  
+
+- **Resource Allocation by Blood Type & Severity:**  
+  - Prioritize **O+ and A+ patients** in resource planning.  
+  - Establish **specialized care units** for severe conditions.  
+  - Increase **preventive care efforts** for lower-cost cases.  
+
+- **Cost Management & Facility Optimization:**  
+  - Collaborate with **high-cost insurers** to reduce claims.  
+  - Expand **hospital resources** for severe cases.  
+  - Strengthen **clinic support** for chronic disease management.  
+
+- **Strategic Facility Utilization:**  
+  - Shift **routine cases to clinics** to ease hospital burden.  
+  - Increase **hospital capacity** for emergencies.  
+  - Launch **community outreach programs** to optimize healthcare access.  
 
 ---
 
 ## 6. Conclusion & Future Work
 
 ### Project Summary
+The analysis confirms that **patient demographics**—including age, gender, and blood type—significantly impact **healthcare costs, condition severity, and insurance claims**.  
 
-## 6. Conclusion & Future Work
-
-### Project Summary
-The analysis confirms that patient demographics—including age, gender, and blood type—significantly impact healthcare costs, condition severity, and insurance claims. Insights from SQL queries and Power BI dashboards highlight key trends in high-cost groups, facility utilization, and billing distributions, leading to data-driven recommendations for optimizing healthcare resources.
-
+Insights from **SQL queries and Power BI dashboards** reveal key trends in **high-cost groups, facility utilization, and billing distributions**, leading to **data-driven recommendations** for optimizing healthcare resources.  
 
 ### Future Directions
-- **Enhanced Predictive Analytics:** Implement risk prediction models to forecast high-cost claims and severe cases based on demographic trends.
-- **Expanded Data Integration:** Incorporate additional variables such as hospital location, medical history, and treatment outcomes for deeper insights.
-- **Real-Time Dashboards:** Improve Power BI dashboards with live data integration to enable real-time monitoring of patient trends and resource allocation.
-- **Policy & Cost Optimization:** Work closely with insurance providers and healthcare administrators to implement cost-saving strategies based on high-risk patient groups.
 
-By leveraging data analytics, strategic planning, and continuous improvement, this project provides a strong foundation for reducing healthcare costs, improving patient care, and enhancing operational efficiency.
+- **Enhanced Predictive Analytics:**  
+  - Implement **risk prediction models** to forecast **high-cost claims** and **severe cases** based on demographic trends.  
+
+- **Expanded Data Integration:**  
+  - Incorporate **hospital location, medical history, and treatment outcomes** for deeper insights.  
+
+- **Real-Time Dashboards:**  
+  - Integrate **live data** in Power BI to enable **real-time monitoring** of patient trends and resource allocation.  
+
+- **Policy & Cost Optimization:**  
+  - Work with **insurance providers** and **healthcare administrators** to implement **cost-saving strategies** for high-risk patient groups.  
+
+By leveraging **data analytics, strategic planning, and continuous improvement**, this project provides a foundation for **reducing healthcare costs, improving patient care, and enhancing operational efficiency**.
+
