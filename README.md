@@ -246,7 +246,7 @@ The visuals include:
 
 
 
-### Key Visuals in the Dashboard
+### Example Visuals
 
 - **Cost Breakdown:**  
   Comparison of costs across different age groups, genders, and blood types.
@@ -257,7 +257,7 @@ The visuals include:
 - **Facility Utilization:**  
   Charts comparing hospital and clinic billing for severe versus routine cases.
 
-[Interactive Dashboard template can be downloaded here](https://github.com/aurimasplaga/Healthcare_demographic_analysis/tree/main/Dashboards/Template)
+[Interactive Dashboard template can be downloaded here](https://github.com/aurimasplaga/Healthcare_demographic_analysis/blob/main/Dashboards/Template/Healthcare_Demographic_Analysis.pbit)
 
 ---
 ## 4. Insights & Findings
