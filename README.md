@@ -247,15 +247,15 @@ The visuals include:
 
 
 ### Example Visuals
+Below are example visuals showcasing demographic differences based on various condition attributes.
+- **Age Group-wise Condition Severity Distribution:**
+![Condition Severity By Age Group](https://github.com/aurimasplaga/Healthcare_demographic_analysis/blob/main/Dashboards/Condition%20Severity%20By%20Age%20Group.png)
 
-- **Cost Breakdown:**  
-  Comparison of costs across different age groups, genders, and blood types.
+- **Gender-Based Condition Type Distribution:**  
+![Condition Type Based on Gender](https://github.com/aurimasplaga/Healthcare_demographic_analysis/blob/main/Dashboards/Condition%20Type%20Based%20on%20Gender.png)
 
-- **Insurance Analysis:**  
-  Visuals illustrating how different insurance providers are impacted by high-cost claims.
-
-- **Facility Utilization:**  
-  Charts comparing hospital and clinic billing for severe versus routine cases.
+- **Age Group-wise Admission Type Breakdown:**  
+![Admission Type By Age Group](https://github.com/aurimasplaga/Healthcare_demographic_analysis/blob/main/Dashboards/Admission%20Type%20By%20Age%20Group.png)
 
 [Interactive Dashboard template can be downloaded here](https://github.com/aurimasplaga/Healthcare_demographic_analysis/blob/main/Dashboards/Template/Healthcare_Demographic_Analysis.pbit)
 
