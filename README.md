@@ -15,6 +15,15 @@ The project is divided into several key phases:
 5. Recommendations
 6. Conclusion & Future Work
 
+### 🛠 Technologies Used
+- **SQL**: For data querying, aggregation, and analysis across various datasets (Employee, Product, Sales, etc.).
+- **PostgreSQL**: The relational database used to store and manage the data for querying and analysis.
+- **DBeaver**: The SQL client used to connect to and interact with the PostgreSQL database.
+- **Excel**: For data manipulation and dataset cleaning.
+- **Power BI**: For data visualization, creating dashboards, and presenting key insights.
+- **GitHub**: For version control and project management.
+
+
 ---
 
 # 1. Data Collection & Preparation
