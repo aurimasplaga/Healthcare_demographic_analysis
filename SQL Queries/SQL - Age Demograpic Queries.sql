@@ -18,7 +18,7 @@ ORDER BY
 
 -- Age demographic count, total billing and average billing amount:
 
-WWITH AgeDemographics AS (
+WITH AgeDemographics AS (
     SELECT
         COUNT(record_id) AS patient_count, -- Number of patients per age group
         CASE 
