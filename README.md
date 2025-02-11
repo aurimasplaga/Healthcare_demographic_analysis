@@ -44,7 +44,6 @@ The project is divided into several key phases:
 - **Schema Development:**  
   Organize the cleaned data into a star schema, which optimizes the dataset for efficient querying and reporting.
 
-> 
 > ![Star Schema Diagram](https://github.com/aurimasplaga/Healthcare_demographic_analysis/blob/main/Star%20Schema/Star_Schema.png)
 
 ---
