@@ -175,6 +175,42 @@ ORDER BY
 | Lakeside Memorial Hospital      | 2022 | 699      | 19,281,327 |
 | River Valley Medical Center     | 2022 | 697      | 20,011,015 |
 
+### 📌 Example Query #3
+```sql
+WITH AgeDemographics AS (
+    SELECT
+        COUNT(record_id) AS patient_count, -- Number of patients per age group
+        CASE 
+            WHEN age BETWEEN 18 AND 29 THEN 'Young Adults (18-29)'
+            WHEN age BETWEEN 30 AND 44 THEN 'Early Adults (30-44)'
+            WHEN age BETWEEN 45 AND 59 THEN 'Middle-age Adults (45-59)'
+            WHEN age BETWEEN 60 AND 74 THEN 'Old Adults (60-74)'
+            WHEN age >= 75 THEN 'Elderly (75+)'
+            ELSE 'Uncategorised'
+        END AS age_demographics,
+        SUM(billing_amount) AS total_billing, 
+        ROUND(AVG(billing_amount), 2) AS average_billing 
+    FROM healthcare_dataset 
+    GROUP BY age_demographics
+)
+SELECT
+    patient_count,
+    age_demographics,
+    total_billing,
+    average_billing
+FROM AgeDemographics
+ORDER BY total_billing DESC;
+```
+
+### Sample Query Results
+| Patients | Age Group            | Total Billing ($) | Avg. Billing per Patient ($) |
+|----------|----------------------|------------------:|----------------------------:|
+| 8,672    | Elderly (75+)        | 322,030,265      | 37,134.49                   |
+| 10,256   | Old Adults (60-74)   | 297,428,082      | 29,000.40                   |
+| 11,714   | Middle-age Adults (45-59) | 246,257,420  | 21,022.49                   |
+| 11,008   | Early Adults (30-44) | 200,533,972      | 18,217.11                   |
+| 7,338    | Young Adults (18-29) | 166,407,011      | 22,677.43                   |
+
 
 [All SQL queries used for aggregating data can be found here.](https://github.com/aurimasplaga/Healthcare_demographic_analysis/tree/main/SQL%20Queries)
 
