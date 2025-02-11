@@ -54,7 +54,7 @@ The project is divided into several key phases:
 - **Descriptive Statistics:** SQL queries were used to compute averages, medians, and distributions for key metrics such as patient age, billing amounts, and length of stay.  
 - **Data Aggregation:** Grouped data by demographics (age, gender, blood type) to identify cost patterns and severity trends.  
 
-### 📌 Sample SQL Query  
+### 📌 Example Query #1 
 ```sql
 -- Blood demographic average stay duration and average billing amount based on medical condition:
 
@@ -115,6 +115,66 @@ ORDER BY
 | A+         | Fractures              | 27.97   | 19836.77  |
 | A+         | Gallstones             | 14.17   | 6471.25   |
 | A+         | Obesity                | 18.29   | 6265.05   |
+
+### 📌 Example Query #2
+
+```sql
+-- Hospital patient count and billing amount sum categorized by year:
+WITH HospitalCount AS (
+	SELECT 
+		hospital, 
+		EXTRACT(YEAR FROM date_of_admission) AS record_year, 
+		COUNT(record_id) AS patient_count  -
+	FROM healthcare_dataset
+	GROUP BY
+		record_year,
+		hospital
+	ORDER BY
+		record_year,  
+		patient_count DESC  
+),
+BillingAmount AS (
+	SELECT
+		hospital, 
+		EXTRACT(YEAR FROM date_of_admission) AS record_year, 
+		SUM(billing_amount) AS billing_amount 
+	FROM healthcare_dataset
+	GROUP BY
+		record_year,
+		hospital
+	ORDER BY
+		record_year, 
+		billing_amount DESC  
+)
+SELECT
+	hosp.hospital, 
+	hosp.record_year, 
+	patient_count,  
+	billing_amount  
+FROM HospitalCount AS hosp
+INNER JOIN BillingAmount AS billa 
+	ON hosp.hospital = billa.hospital  -- Joining on hospital name
+	AND hosp.record_year = billa.record_year  -- Ensuring records match for the same year
+ORDER BY
+	record_year,  
+	patient_count DESC,  
+	billing_amount DESC;  
+```
+
+### Sample Query Results (Limit of 10)
+| Hospital Name                   | Year | Patients | Revenue ($) |
+|----------------------------------|------|----------|------------|
+| Evercare Specialty Hospital     | 2022 | 777      | 23,317,616 |
+| Pinecrest Regional Hospital     | 2022 | 769      | 21,317,165 |
+| Greenwood General Hospital      | 2022 | 768      | 24,616,551 |
+| Highland Care Clinic            | 2022 | 768      | 20,651,065 |
+| Maplewood General Hospital      | 2022 | 762      | 23,237,966 |
+| Starlight Health Clinic         | 2022 | 761      | 22,320,217 |
+| Summit Health Center            | 2022 | 760      | 19,120,911 |
+| Brightview Medical Center       | 2022 | 741      | 20,664,129 |
+| Lakeside Memorial Hospital      | 2022 | 699      | 19,281,327 |
+| River Valley Medical Center     | 2022 | 697      | 20,011,015 |
+
 
 [All SQL queries used for aggregating data can be found here.](https://github.com/aurimasplaga/Healthcare_demographic_analysis/tree/main/SQL%20Queries)
 
